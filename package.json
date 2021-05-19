@@ -1,0 +1,25 @@
+{
+  "name": "simplesapi",
+  "version": "1.0.0",
+  "description": "Repositorio criado para guardar meus trabalhos que serão feito durante o Women Can Code - 5 Edição.",
+  "main": "index.js",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celiareginar/simplesAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celiareginar/simplesAPI/issues"
+  },
+  "homepage": "https://github.com/celiareginar/simplesAPI#readme"
+}

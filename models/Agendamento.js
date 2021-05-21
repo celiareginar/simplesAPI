@@ -22,7 +22,7 @@ class Agendamento{
         const agendamentoComData = {...agendamento, data_agendamento, data_servico};
 
         const ehDataValida = moment(agendamento.data_servico).isSameOrAfter(agendamento.data_agendamento)
-        const ehNomeCliente = agendamento.nome_length > 2
+        const ehNomeCliente = agendamento.nome_cliente.length > 2
 
         const validacoes = [
             {
@@ -47,7 +47,7 @@ class Agendamento{
             if(error){
                 resp.status(400).json(error)
             }
-            
+
             resp.status(201).json({...agendamentoComData, 
             id: results.insertId})
             

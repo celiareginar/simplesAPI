@@ -1,8 +1,10 @@
 class Tabelas{
+
     init (conexao){
         this.conexao = conexao;
         this.criarAgendamento();
-    }
+    };
+
     criarAgendamento(){
         const sql = `CREATE TABLE IF NOT EXISTS agendamento (id int NOT NULL AUTO_INCREMENT,
         nome_cliente varchar(50) NOT NULL, servico varchar(50) NOT NULL, 
@@ -13,7 +15,6 @@ class Tabelas{
                 throw error
             }
         });
-    }    
-}
-
+    };
+};
 module.exports = new Tabelas;

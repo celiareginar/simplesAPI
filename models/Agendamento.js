@@ -22,7 +22,21 @@ class Agendamento{
             }
             resp.status(201).json(result);
         });
-    }
+    };
+
+    alterar(id, valores, resp){
+        const sql = 'UPDATE agendamento SET ? WHERE id =?'
+
+        if(valores.data_servico){
+            valores.data_servico = moment(valores.data_servico).format('YYYY-MM-DD');
+        }
+        conexao.query(sql, [valores, id], (error, result) =>{
+            if(error){
+                resp.status(400).json(error)
+            }
+            resp.status(200).json(result)
+        });
+    };
 
     inserir(agendamento, resp) {
 

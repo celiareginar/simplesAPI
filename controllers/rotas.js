@@ -12,6 +12,14 @@ module.exports = app => {
 
     });
 
+    app.put('/agendamento/:id', (req, resp) =>{
+        const id = parseInt(req.params.id);
+        const agendamento = req.body;
+
+        Agendamento.alterar(id, agendamento)
+        })
+    })
+
     app.post('/agendamento', (req, resp) => {
 
         const agendamento = req.body;

@@ -14,6 +14,16 @@ class Agendamento{
         });
     };
 
+    buscaPorId(id, resp) {
+        const sql = 'SELECT * FROM agendamento HERE id = ?';
+        conexao.query(sql, id, (error, result)=> { 
+            if(error){
+                resp.status(400).json(error);
+            }
+            resp.status(201).json(result);
+        });
+    }
+
     inserir(agendamento, resp) {
 
         const sql = `INSERT INTO AGENDAMENTO SET ?`;
